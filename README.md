@@ -44,7 +44,7 @@
 
 1. **Склонировать репозиторий**:
    ```bash
-   git clone https://github.com/ТВОЙ_ГИТХАБ/ИМЯ_РЕПОЗИТОРИЯ.git
+   git clone https://github.com/TeraGigaByte/barbershop-mobile-landing
    ```
 2. **Открыть `index.html` в браузере**.
 
