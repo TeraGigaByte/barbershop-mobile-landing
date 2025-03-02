@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JAIS Barbershop</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <p>Областная ул., 9, корп. 1, Кудрово</p>
+    </header>
+    <main>
+      <section class="hero">
+        <div class="carousel">
+          <img src="./img/barbershop1.jpg" alt="Модель с прической" />
+          <img src="./img/barbershop2.jpg" alt="Вторая картинка" />
+          <img src="./img/barbershop3.jpg" alt="Третья картинка" />
+          <img src="./img/barbershop4.jpg" alt="Четвертая картинка" />
+        </div>
+      </section>
+      <section class="info">
+        <h1>JAIS</h1>
+        <p>Barbershop by Jasur Ismailov</p>
+        <button class="btn">Записаться онлайн</button>
+      </section>
+      <section class="reviews">
+        <h2>Отзывы о нас</h2>
+        <div class="review">
+          <h3><span>Никитенко Алексей</span> <span>★★★★★</span></h3>
+          <p>
+            Отличный барбершоп! Попал на стрижку и коррекцию бороды к мастеру
+            Юсуфу. Великолепный мастер! Стрижка и коррекция выше всяких похвал!
+            Учёл все пожелания, рассказал как дальше ухаживать за бородой. Всё
+            сделал максимально красиво и аккуратно! Обслуживание в барбершопе и
+            атмосфера мегадружелюбные. Всем от души советую – заходите, не
+            пожалеете! Сам обязательно вернусь через месяц на очередную
+            коррекцию бороды.
+          </p>
+        </div>
+        <div class="review">
+          <h3><span>Леонид Терехин</span> <span>★★★★★</span></h3>
+          <p>
+            Очень хорошие мастера, профессионалы своего дела. Стригу детей
+            только у Жасура и Юсуфа. Уютная и доброжелательная атмосфера, все на
+            высоте.
+          </p>
+        </div>
+        <div class="review">
+          <h3><span>Main T.</span> <span>★★★★★</span></h3>
+          <p>
+            Вожу к ребятам племянника 9 лет, стригли Юсуф, Жасур – всегда все
+            отлично, но Амар 🔥 сегодня привёл в порядок обросшего домовенка за
+            15 минут, вместо обычных ~40. Это топ, благодарю 🙏🏽
+          </p>
+        </div>
+      </section>
+    </main>
+    <script>
+      $(document).ready(function () {
+        $(".carousel").slick({
+          dots: true,
+          arrows: false,
+          autoplay: true,
+          autoplaySpeed: 3000,
+          infinite: true,
+          speed: 500,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        });
+      });
+    </script>
+  </body>
+</html>
