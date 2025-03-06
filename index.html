@@ -49,7 +49,20 @@
         >
       </section>
       <section class="reviews">
-        <h2>Отзывы о нас</h2>
+        <div class="reviews-header">
+          <h2>Отзывы о нас</h2>
+          <a
+            class="reviews-link"
+            href="https://yandex.ru/maps/118515/kudrovo/?ll=30.515207%2C59.918359&mode=poi&poi%5Bpoint%5D=30.515032%2C59.918418&poi%5Buri%5D=ymapsbm1%3A%2F%2Forg%3Foid%3D140058387572&tab=reviews&utm_source=share&z=18"
+            target="_blank"
+          >
+            <img
+              class="reviews-arrow"
+              src="./assets/img/svg/arrow.svg"
+              alt="Стрелка"
+            />
+          </a>
+        </div>
         <div class="review">
           <h3><span>Никитенко Алексей</span> <span>★★★★★</span></h3>
           <p>
@@ -80,6 +93,42 @@
         </div>
       </section>
     </main>
+    <footer>
+      <div class="footer-container">
+        <!-- Верхний блок: логотип -->
+        <div class="footer-top">
+          <a href="#">
+            <img
+              class="footer-logo"
+              src="./assets/img/svg/javis.svg"
+              alt="JAIS Barbershop"
+            />
+          </a>
+        </div>
+        <!-- Нижний блок: телефон и соцсети -->
+        <div class="footer-bottom">
+          <!-- Левая часть: телефон -->
+          <div class="footer-left">
+            <a href="tel:+79111278423" class="footer-phone"
+              >+7 (911) 127-84-23</a
+            >
+          </div>
+          <!-- Правая часть: иконки соцсетей -->
+          <div class="footer-right">
+            <a href="#" target="_blank">
+              <img src="./assets/img/svg/vk.svg" alt="VK" />
+            </a>
+            <a href="#" target="_blank">
+              <img src="./assets/img/svg/instagram.svg" alt="Instagram" />
+            </a>
+            <a href="#" target="_blank">
+              <img src="./assets/img/svg/whatsapp.svg" alt="WhatsApp" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
     <script>
       $(document).ready(function () {
         $(".carousel").slick({

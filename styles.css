@@ -1,23 +1,77 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap");
+/* Подключение шрифта CeraPro из локальной папки (без .woff2) */
+@font-face {
+  font-family: "CeraPro";
+  src: url("assets/fonts/CeraPro-Regular.eot");
+  src: local("Cera Pro Regular"), local("CeraPro-Regular"),
+    url("assets/fonts/CeraPro-Regular.eot?#iefix") format("embedded-opentype"),
+    url("assets/fonts/CeraPro-Regular.woff") format("woff"),
+    url("assets/fonts/CeraPro-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "CeraPro";
+  src: url("assets/fonts/CeraPro-Bold.eot");
+  src: local("Cera Pro Bold"), local("CeraPro-Bold"),
+    url("assets/fonts/CeraPro-Bold.eot?#iefix") format("embedded-opentype"),
+    url("assets/fonts/CeraPro-Bold.woff") format("woff"),
+    url("assets/fonts/CeraPro-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "CeraPro";
+  src: url("assets/fonts/CeraPro-Thin.eot");
+  src: local("Cera Pro Thin"), local("CeraPro-Thin"),
+    url("assets/fonts/CeraPro-Thin.eot?#iefix") format("embedded-opentype"),
+    url("assets/fonts/CeraPro-Thin.woff") format("woff"),
+    url("assets/fonts/CeraPro-Thin.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "CeraPro";
+  src: url("assets/fonts/CeraPro-Medium.eot");
+  src: local("Cera Pro Medium"), local("CeraPro-Medium"),
+    url("assets/fonts/CeraPro-Medium.eot?#iefix") format("embedded-opentype"),
+    url("assets/fonts/CeraPro-Medium.woff") format("woff"),
+    url("assets/fonts/CeraPro-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
 
+/* Глобальные стили */
 body {
-  font-family: "Montserrat", sans-serif;
-  background: #111;
-  color: #fff;
+  font-family: "CeraPro", sans-serif;
+  background: #212121; /* основной фон */
+  color: #fffef6; /* весь текст */
   margin: 0;
   padding: 0;
 }
+
+/* Шапка */
 header {
-  background: #111;
-  padding: 10px;
-  font-size: 14px;
-  font-weight: 400;
-  text-align: center;
-  color: #bbb;
+  background: #1b1b1b; /* фон шапки */
+  padding: 2px 0px 0px 2px; /* уменьшенные отступы */
+  position: relative;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+header p {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 300;
+  color: #fffef6;
+}
+
+/* Hero секция */
 .hero {
   width: 100%;
   overflow: hidden;
+  height: 66vh;
 }
 .carousel {
   width: 100%;
@@ -25,7 +79,7 @@ header {
 .carousel img,
 .carousel video {
   width: 100%;
-  height: 95vh;
+  height: 66vh;
   object-fit: cover;
   display: block;
 }
@@ -33,96 +87,190 @@ header {
   background: black;
   pointer-events: none;
 }
+
+/* Слайдер (slick) */
 .slick-dots {
   bottom: 10px;
 }
 .slick-dots li {
-  margin: 0 3px;
+  margin: 0 0px;
 }
 .slick-dots li button:before {
-  color: white;
+  color: #212121; /* неактивные точки */
   font-size: 10px;
   opacity: 1;
 }
 .slick-dots li.slick-active button:before {
-  color: #4a00e0;
+  color: #3b44ee; /* активные точки */
 }
+
+/* Информационный блок (контейнер с записью) */
 .info {
-  padding: 20px;
+  margin: 0;
+  padding: 10px 20px 20px;
   text-align: left;
 }
 .info h1 {
-  font-size: 28px;
-  margin: 10px 0;
-  font-weight: 600;
+  font-size: 32px;
+  margin: 0px 0px 5px;
+  font-weight: 700;
+  color: #fffef6;
 }
 .info p {
   font-size: 16px;
-  color: #bbb;
-  font-weight: 400;
+  font-weight: 300;
+  color: #fffef6;
+  margin: 0 0 10px;
 }
+
+/* Кнопка "Записаться онлайн" */
 .btn {
   display: block;
   text-align: center;
-  background: #4a00e0;
-  color: white;
+  background: #3b44ee;
+  color: #fffef6;
   border: none;
+  border-radius: 10px;
   padding: 15px;
   max-width: 100%;
   width: calc(100% - 40px);
-  font-size: 18px;
+  font-size: 20px;
   border-radius: 8px;
   cursor: pointer;
-  font-weight: 600;
+  font-weight: 500;
   text-decoration: none;
   margin: 0 auto;
+  transition: background 0.3s ease;
 }
+.btn:hover {
+  background: #353dce;
+}
+
+/* Блок с отзывами */
 .reviews {
-  padding: 20px;
+  margin: 0;
+  padding: 10px 20px 20px;
   text-align: left;
   position: relative;
+  background: #212121;
+  color: #fffef6;
 }
 
-.reviews h2 {
-  font-size: 22px;
-  font-weight: 600;
+.reviews-header {
+  display: flex;
+  align-items: center; /* вертикальное выравнивание */
+  justify-content: space-between; /* текст слева, иконка справа */
+  margin-bottom: 15px; /* отступ от следующего контента */
+}
+
+.reviews-header h2 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #fffef6;
+  margin: 0; /* убираем дефолтные отступы */
+}
+
+.reviews-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.reviews-header h2 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #fffef6;
+  margin: 0;
+}
+
+.reviews-header .reviews-link {
   display: inline-block;
 }
 
-.reviews h2::after {
-  content: "\2192"; /* Юникод стрелки вправо → */
-  font-size: 22px;
-  margin-left: 10px;
-  color: #fff;
-  display: inline-block;
+.reviews-header .reviews-arrow {
+  width: 2em;
+  height: auto;
+  flex-shrink: 0;
 }
 
 .review {
-  background: #222;
+  background: #212121;
   padding: 15px;
   margin: 10px 0;
   border-radius: 8px;
-  border: 1px solid #fff;
+  border: 2px solid #5e5d57;
   position: relative;
+  color: #fffef6;
 }
 .review h3 {
-  font-size: 18px;
+  font-size: 16px;
   margin-bottom: 5px;
-  font-weight: 600;
+  font-weight: 700;
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-top: 0;
-}
-.review h3 span:first-child {
-  color: #fff;
+  color: #fffef6;
 }
 .review h3 span:last-child {
-  color: gold;
+  color: #ffd034; /* звезды */
   font-size: 16px;
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: 2px;
 }
 .review p {
-  color: #bbb;
+  font-size: 16px;
+  font-weight: 300;
+  color: #fffef6;
+}
+
+/* Футер */
+footer {
+  background: #1b1b1b;
+  padding: 30px 20px 35px;
+  color: #fffef6;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.footer-top {
+  text-align: center;
+  margin-bottom: 15px;
+}
+.footer-logo {
+  width: 80px;
+  height: auto;
+}
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+.footer-left {
+  text-align: left;
+}
+.footer-phone {
+  color: #fffef6;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  white-space: nowrap;
+}
+.footer-right {
+  text-align: right;
+}
+.footer-right a {
+  margin-left: 15px;
+  white-space: nowrap;
+  text-decoration: none;
+}
+.footer-right img {
+  width: 24px;
+  height: 24px;
 }
